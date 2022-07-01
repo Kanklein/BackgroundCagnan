@@ -31,9 +31,9 @@
         android:autofillHints=""
         android:ems="10"
         android:fontFamily="casual"
-        android:inputType="textPersonName"
+        android:hint="@string/birthday"
+        android:inputType="datetime|textPersonName"
         android:minHeight="48dp"
-        android:text="@string/enter_name"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +69,7 @@
         android:layout_height="48dp"
         android:entries="@array/user_type"
         android:minHeight="48dp"
+        android:spinnerMode="dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -124,10 +125,10 @@
         android:text="@string/from_cit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintVertical_bias="0.306" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
