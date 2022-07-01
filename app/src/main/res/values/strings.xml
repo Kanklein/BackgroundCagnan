@@ -2,6 +2,17 @@
     <string name="app_name">BackgroundCagnan</string>
     <string name="title">Hello Cagnan</string>
     <string name="name">Name</string>
-    <string name="tvLabel">Name</string
+    <string name="tvLabel">Name</string>
     <string name="enter_name">Enter Name!</string>
+    <string name="Main_Button">Change!</string>
+    <string name="day_mode">Daymode</string>
+    <string name="from_cit">From CIT</string>
+    <string name="to_do">TODO</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string-array name="user_type">
+        <item>Student</item>
+        <item>Admin</item>
+        <item>Teacher</item>
+    </string-array>
 </resources>
