@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BackgroundCagnan</string>
+    <string name="title">Hello Cagnan</string>
+    <string name="name">Name</string>
+    <string name="tvLabel">Name</string
+    <string name="enter_name">Enter Name!</string>
+</resources>
