@@ -3,6 +3,7 @@ package com.example.backgroundcagnan;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         bgElement.setBackgroundColor(Color.WHITE);
         //myButtonListenerMethodTest();
         daynightToggleListenerMethod();
+        userTypeChangeListenerMethod(this);
     }
 
     public void daynightToggleListenerMethod(){
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.clMain);
+                TextView tvLabel = (TextView) findViewById(R.id.tvLabel);
                 CheckBox cbCIT = (CheckBox) findViewById(R.id.cbCIT);
                 RadioButton rbMale = (RadioButton) findViewById(R.id.rbMale);
                 RadioButton rbFemale = (RadioButton) findViewById(R.id.rbFemale);
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 RadioButton rbthird = (RadioButton) findViewById(R.id.rbthird);
                 RadioButton rbfourth = (RadioButton) findViewById(R.id.rbfourth);
 
-                TextView[] texts = {swday, cbCIT, rbMale, rbFemale, rbfirst ,rbsecond , rbthird, rbthird, rbfourth};
+                TextView[] texts = { tvLabel, swday, cbCIT, rbMale, rbFemale, rbfirst ,rbsecond , rbthird, rbthird, rbfourth};
                 boolean day = swday.isChecked();
                 if (day) {
                     bgElement.setBackgroundColor(Color.WHITE);
@@ -60,12 +64,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void userTypeChangeListener(){
+    public void userTypeChangeListenerMethod(Context c){
         Spinner spUserType = (Spinner) findViewById(R.id.spUserType);
         spUserType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                TextView tvselected = (TextView) spUserType.getItemAtPosition(i);
+                String selected = (String) spUserType.getItemAtPosition(i);
+                Toast.makeText(c, "You have selected " + selected, Toast.LENGTH_SHORT).show();
             }
 
             @Override
