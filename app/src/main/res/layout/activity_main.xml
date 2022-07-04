@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.571" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spUserType"
         android:layout_width="219dp"
         android:layout_height="48dp"
         android:entries="@array/user_type"
@@ -86,13 +86,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spUserType"
         app:layout_constraintVertical_bias="0.199" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/swDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:checked="false"
         android:minHeight="48dp"
         android:text="@string/day_mode"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +118,7 @@
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbCIT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -142,31 +143,32 @@
         app:layout_constraintVertical_bias="0.795">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/rbfirst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_1st_year" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/rbsecond"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_2nd_year" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbthird"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_3rd_year" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/rbfourth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_4th_year" />
     </RadioGroup>
 
     <RadioGroup
+        android:id="@+id/rb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
@@ -177,13 +179,13 @@
         app:layout_constraintVertical_bias="0.951">
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/rbMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/male" />
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/rbFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/female" />
